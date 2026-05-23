@@ -91,7 +91,7 @@ p.lead {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  height: 68px;
+  height: 84px;
   gap: 24px;
 }
 .brand {
@@ -100,7 +100,7 @@ p.lead {
   gap: 14px;
 }
 .brand img {
-  height: 48px;
+  height: 58px;
   width: auto;
   object-fit: fill;
 }
@@ -119,7 +119,7 @@ p.lead {
   font-size: 15px;
   letter-spacing: 0.04em;
   color: var(--ink-2);
-  padding: 0 16px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
   position: relative;
@@ -147,7 +147,7 @@ p.lead {
   border: 1px solid transparent;
   font: inherit;
   letter-spacing: inherit;
-  width: 80px;
+  width: 90px;
   height: auto;
   color: var(--ps-blue);
   cursor: pointer;
@@ -296,12 +296,14 @@ p.lead {
   .nav .lang { display: none; }
   .nav.open { display: flex; padding: 0; }
   .nav a {
-    padding: 18px 24px;
+    padding: 20px 28px;
     justify-content: flex-start;
     width: 100%;
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.18);
     background: var(--ps-blue);
+    font-size: 16px;
+    letter-spacing: 0.03em;
   }
   .nav a:hover,
   .nav a.active {
@@ -314,8 +316,8 @@ p.lead {
     justify-content: center;
     background: var(--ps-blue);
     border: 0;
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     cursor: pointer;
     padding: 0;
     align-self: center;
@@ -339,9 +341,9 @@ p.lead {
   .menu-toggle span::before { top: -6px; }
   .menu-toggle span::after  { top: 6px; }
 
-  .site-header .row { height: 64px; }
+  .site-header .row { height: 72px; }
   .brand { margin-left: 12px; }
-  .brand img { content: url("assets/ps-icon.png"); height: 40px; }
+  .brand img { content: url("assets/ps-icon.png"); height: 46px; }
   .lang-toggle { display: none !important; }
   .menu-toggle {
     display: inline-flex;
@@ -349,8 +351,8 @@ p.lead {
     justify-content: center;
     background: var(--ps-blue);
     border: 0;
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     cursor: pointer;
     padding: 0;
     align-self: center;
@@ -370,10 +372,10 @@ p.lead {
   }
   .nav.open .lang-mobile button {
     width: auto;
-    padding: 6px 16px;
-    font-size: 11px;
-    border: 1px solid transparent;
-    background: var(--ps-blue);
+    padding: 10px 24px;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: transparent;
     color: #fff;
   }
   .nav.open .lang-mobile button.on {
