@@ -30,6 +30,7 @@ html, body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -884,6 +885,7 @@ p.lead {
       flex-direction: column;
       gap: 18px;
       box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      overflow: hidden;
     }
     .report .cover .top {
       display: flex;
@@ -931,7 +933,7 @@ p.lead {
     .report .cover .bottom-bar {
       height: 8px;
       background: var(--ps-blue);
-      margin: 0 -28px -28px;
+      margin: 0 -20px -20px;
     }
 
     .report .meta {
