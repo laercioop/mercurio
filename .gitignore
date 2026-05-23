@@ -1,0 +1,9 @@
+# Versões antigas e arquivos de trabalho
+old/
+
+# Claude Code
+.claude/
+
+# Sistema
+Thumbs.db
+.DS_Store

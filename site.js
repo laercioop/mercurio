@@ -1,0 +1,233 @@
+/* P&S — shared header/footer + simple i18n
+   The translations are kept inline so each page stays self-contained-ish. */
+
+(function () {
+  const PAGES = [
+    { href: "index.html",     pt: "Home",        en: "Home" },
+    { href: "relatorios.html",pt: "Relatórios",  en: "Reports" },
+    { href: "sobre.html",     pt: "Sobre",       en: "About" },
+    { href: "historia.html",  pt: "História",    en: "History" },
+    { href: "contato.html",   pt: "Contato",     en: "Contact" },
+  ];
+
+  const FOOTER_TXT = {
+    pt: {
+      about:    "Sobre",
+      history:  "História",
+      reports:  "Relatórios",
+      contact:  "Contato",
+      tagline:  "Análise macroeconômica independente para clientes institucionais.",
+      address:  "R. Alves Guimarães 462 cj 93\n05410-000 São Paulo SP",
+      phone:    "+55 11 3061 0600",
+      legal:    "© 2026 Pinotti & Schwartsman Associados. Todos os direitos reservados.",
+      restrict: "Acesso exclusivo a clientes",
+    },
+    en: {
+      about:    "About",
+      history:  "History",
+      reports:  "Reports",
+      contact:  "Contact",
+      tagline:  "Independent macroeconomic research for institutional clients.",
+      address:  "R. Alves Guimarães 462 cj 93\n05410-000 São Paulo, Brazil",
+      phone:    "+55 11 3061 0600",
+      legal:    "© 2026 Pinotti & Schwartsman Associados. All rights reserved.",
+      restrict: "Client access only",
+    }
+  };
+
+  function getLang() {
+    try {
+      return localStorage.getItem("ps-lang") || "pt";
+    } catch (_) {
+      return "pt";
+    }
+  }
+  function setLang(l) {
+    try {
+      localStorage.setItem("ps-lang", l);
+    } catch (_) {}
+    document.documentElement.lang = l === "pt" ? "pt-BR" : "en";
+    applyI18n();
+  }
+
+  function applyI18n() {
+    const lang = getLang();
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    // Toggle [data-pt]/[data-en] elements
+    document.querySelectorAll("[data-pt]").forEach(el => {
+      const v = el.getAttribute("data-" + lang);
+      if (v != null) el.textContent = v;
+    });
+    // Update lang button states
+    document.querySelectorAll(".lang button").forEach(b => {
+      b.classList.toggle("on", b.dataset.lang === lang);
+    });
+    // Update nav labels
+    document.querySelectorAll(".nav a[data-page]").forEach(a => {
+      const p = PAGES.find(x => x.href === a.dataset.page);
+      if (p) a.textContent = p[lang];
+    });
+    // Update footer
+    const F = FOOTER_TXT[lang];
+    document.querySelectorAll("[data-footer]").forEach(el => {
+      const k = el.dataset.footer;
+      if (F[k] != null) el.textContent = F[k];
+    });
+  }
+
+  function buildHeader(activePage) {
+    const lang = getLang();
+    const navLinks = PAGES.map(p =>
+      `<a href="${p.href}" data-page="${p.href}" ${p.href === activePage ? 'class="active"' : ''}>${p[lang]}</a>`
+    ).join("");
+    return `
+      <header class="site-header">
+        <div class="container row">
+          <a href="index.html" class="brand" aria-label="Pinotti &amp; Schwartsman Associados">
+            <img src="assets/ps-logo.png" alt="Pinotti &amp; Schwartsman Associados" />
+          </a>
+          <nav class="nav">${navLinks}
+            <div class="lang lang-mobile" role="group" aria-label="Language">
+              <button data-lang="pt" type="button">PORT</button>
+              <button data-lang="en" type="button">ENG</button>
+            </div>
+          </nav>
+          <button class="menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+            <span></span>
+          </button>
+          <div class="lang lang-desktop" role="group" aria-label="Language">
+            <button data-lang="pt" type="button">PORT</button>
+            <button data-lang="en" type="button">ENG</button>
+          </div>
+        </div>
+      </header>
+    `;
+  }
+
+  function buildFooter() {
+    return `
+      <footer class="site-footer">
+        <div class="container">
+          <div class="grid">
+            <div>
+              <div class="wordmark">Pinotti &amp;<br/>Schwartsman</div>
+              <p class="small" data-footer="tagline">Análise macroeconômica independente para clientes institucionais.</p>
+            </div>
+            <div>
+              <h4 data-pt="Navegação" data-en="Navigation">Navegação</h4>
+              <ul>
+                <li><a href="relatorios.html" data-footer="reports">Relatórios</a></li>
+                <li><a href="sobre.html"      data-footer="about">Sobre</a></li>
+                <li><a href="historia.html"   data-footer="history">História</a></li>
+                <li><a href="contato.html"    data-footer="contact">Contato</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 data-pt="Endereço" data-en="Address">Endereço</h4>
+              <p class="small footer-address" data-footer="address">R. Alves Guimarães 462 cj 93
+05410-000 São Paulo SP</p>
+            </div>
+            <div>
+              <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+              <ul>
+                <li data-footer="phone">+55 11 3061 0600</li>
+                <li><a href="mailto:contato@psassociados.com">contato@psassociados.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="legal">
+            <span data-footer="legal">© 2026 Pinotti &amp; Schwartsman Associados. Todos os direitos reservados.</span>
+            <span data-footer="restrict">Acesso exclusivo a clientes</span>
+          </div>
+        </div>
+      </footer>
+    `;
+  }
+
+  function init() {
+    const headerSlot = document.querySelector("[data-slot=header]");
+    const footerSlot = document.querySelector("[data-slot=footer]");
+    if (headerSlot) {
+      const active = headerSlot.dataset.active || "index.html";
+      headerSlot.outerHTML = buildHeader(active);
+    }
+    if (footerSlot) {
+      footerSlot.outerHTML = buildFooter();
+    }
+    document.querySelectorAll(".lang button").forEach(b => {
+      b.addEventListener("click", () => setLang(b.dataset.lang));
+    });
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    if (menuToggle && nav) {
+      nav.id = "site-nav";
+      menuToggle.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          nav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+    initContactForm();
+    applyI18n();
+  }
+
+  function initContactForm() {
+    const form = document.querySelector("[data-contact-form]");
+    if (!form) return;
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const lang = getLang();
+      const subject = lang === "pt"
+        ? "Solicitação de contato institucional"
+        : "Institutional contact request";
+      const labels = lang === "pt"
+        ? {
+            name: "Nome",
+            company: "Empresa",
+            email: "Email",
+            phone: "Telefone",
+            institution: "Tipo de instituição",
+            message: "Mensagem"
+          }
+        : {
+            name: "Name",
+            company: "Company",
+            email: "Email",
+            phone: "Phone",
+            institution: "Institution type",
+            message: "Message"
+          };
+      const body = Object.keys(labels)
+        .map(key => `${labels[key]}: ${data.get(key) || ""}`)
+        .join("\n");
+      const mailto = `mailto:contato@psassociados.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const status = form.querySelector("[data-form-status]");
+
+      if (status) {
+        status.hidden = false;
+      }
+      window.location.href = mailto;
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

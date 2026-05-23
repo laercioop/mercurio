@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato · Pinotti &amp; Schwartsman Associados</title>
+  <meta name="description" content="Contato da Pinotti & Schwartsman Associados para clientes institucionais e parcerias." />
+  <meta property="og:title" content="Contato · Pinotti & Schwartsman Associados" />
+  <meta property="og:description" content="Fale com a equipe da P&S sobre pesquisa macroeconômica institucional." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/ps-logo-br.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Contato">
+  <div data-slot="header" data-active="contato.html"></div>
+
+  <main>
+    <section class="page-head" data-screen-label="Page head">
+      <div class="container">
+        <span class="eyebrow" data-pt="Contato" data-en="Contact">Contato</span>
+        <h1 data-pt="Vamos conversar sobre o que sua instituição precisa enxergar." data-en="Let’s talk about what your institution needs to see.">Vamos conversar sobre o que sua instituição precisa enxergar.</h1>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact">
+        <div class="info">
+          <span class="eyebrow" data-pt="Onde encontrar a casa" data-en="Where to find the firm">Onde encontrar a casa</span>
+          <h2 data-pt="Atendimento direto à equipe da P&S." data-en="Direct contact with the P&S team.">Atendimento direto à equipe da P&amp;S.</h2>
+          <p data-pt="Para potenciais clientes institucionais ou parcerias, entre em contato pelos canais abaixo. Respondemos em até dois dias úteis." data-en="For prospective institutional clients or partnerships, please reach out via the channels below. We respond within two business days.">Para potenciais clientes institucionais ou parcerias, entre em contato pelos canais abaixo. Respondemos em até dois dias úteis.</p>
+
+          <dl class="block">
+            <dt data-pt="Endereço" data-en="Address">Endereço</dt>
+            <dd>R. Alves Guimarães 462 cj 93
+05410-000 São Paulo SP</dd>
+          </dl>
+          <dl class="block">
+            <dt data-pt="Telefone" data-en="Phone">Telefone</dt>
+            <dd>+55 11 3061 0600</dd>
+          </dl>
+          <dl class="block">
+            <dt data-pt="Email" data-en="Email">Email</dt>
+            <dd><a href="mailto:contato@psassociados.com">contato@psassociados.com</a></dd>
+          </dl>
+        </div>
+
+        <aside class="form-pane">
+          <h3 data-pt="Solicitar contato" data-en="Request contact">Solicitar contato</h3>
+          <p class="lead" data-pt="Conte brevemente o contexto e a equipe retorna em até dois dias úteis." data-en="Tell us briefly about the context and the team will follow up within two business days.">Conte brevemente o contexto e a equipe retorna em até dois dias úteis.</p>
+
+          <form class="form-grid contact-form" data-contact-form>
+            <div class="field">
+              <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="company" data-pt="Empresa" data-en="Company">Empresa</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </div>
+            <div class="field">
+              <label for="email" data-pt="Email corporativo" data-en="Corporate email">Email corporativo</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone" data-pt="Telefone" data-en="Phone">Telefone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field full">
+              <label for="institution" data-pt="Tipo de instituição" data-en="Institution type">Tipo de instituição</label>
+              <select id="institution" name="institution">
+                <option data-pt="Gestora de recursos" data-en="Asset manager">Gestora de recursos</option>
+                <option data-pt="Banco" data-en="Bank">Banco</option>
+                <option data-pt="Fundo de pensão" data-en="Pension fund">Fundo de pensão</option>
+                <option data-pt="Tesouraria corporativa" data-en="Corporate treasury">Tesouraria corporativa</option>
+                <option data-pt="Outro" data-en="Other">Outro</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="form-actions">
+              <span class="small" data-pt="Suas informações são tratadas com confidencialidade." data-en="Your information is handled confidentially.">Suas informações são tratadas com confidencialidade.</span>
+              <button class="btn" type="submit"><span data-pt="Enviar solicitação" data-en="Send request">Enviar solicitação</span> <span class="arrow">→</span></button>
+              <p class="form-status small" hidden data-form-status data-pt="Seu aplicativo de email será aberto com a solicitação preenchida." data-en="Your email app will open with the request prefilled.">Seu aplicativo de email será aberto com a solicitação preenchida.</p>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-slot="footer"></div>
+  <script src="site.js"></script>
+</body>
+</html>
