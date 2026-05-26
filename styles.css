@@ -1028,12 +1028,12 @@ p.lead {
     }
 
     /* --- Últimos relatórios --- */
-    .latest-wrap {
+    .report .body .latest-wrap {
       margin-top: 28px;
       padding-top: 22px;
       border-top: 1px solid var(--line);
     }
-    .latest-label {
+    .report .body .latest-label {
       display: block;
       font-size: 11px;
       font-weight: 600;
@@ -1042,7 +1042,7 @@ p.lead {
       color: var(--muted);
       margin-bottom: 14px;
     }
-    .latest-list {
+    .report .body .latest-list {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -1050,13 +1050,13 @@ p.lead {
       flex-direction: column;
       gap: 18px;
     }
-    .latest-entry { display: flex; flex-direction: column; gap: 5px; }
-    .latest-entry-header {
+    .report .body .latest-entry { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .report .body .latest-entry-header {
       display: flex;
       align-items: baseline;
       gap: 10px;
     }
-    .latest-row-date {
+    .report .body .latest-row-date {
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -1064,14 +1064,14 @@ p.lead {
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .latest-row-title {
+    .report .body .latest-row-title {
       font-family: var(--serif);
       font-size: 15px;
       font-weight: 700;
       color: var(--ink);
       line-height: 1.2;
     }
-    .latest-row-excerpt {
+    .report .body .latest-row-excerpt {
       font-size: 13px;
       line-height: 1.6;
       color: var(--ink-2);
