@@ -960,10 +960,12 @@ p.lead {
       flex: 1;
       overflow: hidden;
       margin-top: 10px;
+      background: repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 14px);
       font-family: 'Times New Roman', serif;
-      font-size: 11px;
-      line-height: 1.95;
-      color: var(--ink-2);
+      font-size: 10.5px;
+      line-height: 14px;
+      color: var(--ink);
+      padding-top: 2px;
     }
     .cover-text { margin: 0; }
     .report .cover .bottom-bar {
@@ -1043,23 +1045,16 @@ p.lead {
     .latest-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 14px;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 18px;
     }
-    .latest-row {
+    .latest-entry { display: flex; flex-direction: column; gap: 5px; }
+    .latest-entry-header {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      gap: 12px;
-    }
-    .latest-row-title {
-      font-family: var(--serif);
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.2;
+      gap: 10px;
     }
     .latest-row-date {
       font-size: 11px;
@@ -1069,13 +1064,18 @@ p.lead {
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .latest-excerpt {
-      font-size: 14px;
-      line-height: 1.65;
+    .latest-row-title {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .latest-row-excerpt {
+      font-size: 13px;
+      line-height: 1.6;
       color: var(--ink-2);
       margin: 0;
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
     }
 
     .access {
