@@ -773,8 +773,6 @@ p.lead {
   .services .head { grid-template-columns: 1fr; gap: 24px; }
   .svc-grid { grid-template-columns: 1fr; }
   .about-block { grid-template-columns: 1fr; gap: 30px; }
-  .about-block .visual { aspect-ratio: 16 / 7; }
-  .about-block .copy h2 { max-width: none; }
   .reports-strip .head { grid-template-columns: 1fr; gap: 24px; }
   .cta .row { grid-template-columns: 1fr; }
   .cta .actions { justify-self: start; }
