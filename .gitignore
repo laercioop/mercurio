@@ -3,6 +3,7 @@ old/
 
 # Claude Code
 .claude/
+CLAUDE.md
 
 # Sistema
 Thumbs.db
