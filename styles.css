@@ -296,8 +296,8 @@ p.lead {
 }
 .page-head h1 {
   color: #fff;
-  font-size: clamp(30px, 6vw, 80px);
-  max-width: 18ch;
+  font-size: clamp(18px, 2.6vw, 38px);
+  max-width: none;
 }
 .page-head .meta {
   display: flex;
