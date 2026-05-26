@@ -56,13 +56,7 @@
     // Toggle [data-pt]/[data-en] elements
     document.querySelectorAll("[data-pt]").forEach(el => {
       const v = el.getAttribute("data-" + lang);
-      if (v != null) {
-        if (/^H[1-6]$/.test(el.tagName)) {
-          el.innerHTML = v;
-        } else {
-          el.textContent = v;
-        }
-      }
+      if (v != null) el.textContent = v;
     });
     // Update lang button states
     document.querySelectorAll(".lang button").forEach(b => {
