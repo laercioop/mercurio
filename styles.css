@@ -960,12 +960,10 @@ p.lead {
       flex: 1;
       overflow: hidden;
       margin-top: 10px;
-      background: repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 14px);
       font-family: 'Times New Roman', serif;
-      font-size: 10.5px;
-      line-height: 14px;
+      font-size: 13.5px;
+      line-height: 1.6;
       color: var(--ink);
-      padding-top: 2px;
     }
     .cover-text { margin: 0; }
     .report .cover .bottom-bar {
