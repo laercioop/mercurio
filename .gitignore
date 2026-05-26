@@ -5,6 +5,9 @@ old/
 .claude/
 CLAUDE.md
 
+# Temporários
+temp/
+
 # Sistema
 Thumbs.db
 .DS_Store
