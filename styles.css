@@ -288,7 +288,7 @@ p.lead {
 .page-head {
   background: var(--ps-blue);
   color: #fff;
-  padding: clamp(38px, 5vw, 62px) 0 clamp(30px, 4vw, 48px);
+  padding: clamp(24px, 3.5vw, 42px) 0 clamp(20px, 2.8vw, 34px);
   margin-bottom: 0;
 }
 .page-head .eyebrow {
@@ -925,7 +925,7 @@ p.lead {
       margin: -20px -20px 0;
     }
     .report .cover .date {
-      background: var(--ps-blue);
+      background: var(--rc, var(--ps-blue));
       color: #fff;
       padding: 12px 18px;
       font-size: 14px;
@@ -933,7 +933,7 @@ p.lead {
       letter-spacing: 0.06em;
     }
     .report .cover .pg {
-      background: var(--ps-blue);
+      background: var(--rc, var(--ps-blue));
       color: #fff;
       padding: 12px 14px;
       font-size: 13px;
@@ -942,6 +942,7 @@ p.lead {
     .report .cover .ps-mark {
       width: 64px;
       opacity: 1;
+      filter: var(--rf, none);
     }
     .report .cover h3 {
       font-family: var(--serif);
@@ -953,7 +954,7 @@ p.lead {
       font-family: var(--serif);
       font-style: italic;
       font-size: 16px;
-      color: var(--ps-blue);
+      color: var(--rc, var(--ps-blue));
     }
     .report .cover .stripes {
       flex: 1;
@@ -962,7 +963,7 @@ p.lead {
     }
     .report .cover .bottom-bar {
       height: 8px;
-      background: var(--ps-blue);
+      background: var(--rc, var(--ps-blue));
       margin: 0 -20px -20px;
     }
 
@@ -987,7 +988,7 @@ p.lead {
       font-size: 14px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--ps-blue);
+      color: var(--rc, var(--ps-blue));
       margin-bottom: 8px;
       display: block;
     }
@@ -1000,7 +1001,7 @@ p.lead {
       font-family: var(--serif);
       font-style: italic;
       font-size: clamp(18px, 1.5vw, 22px);
-      color: var(--ps-blue);
+      color: var(--rc, var(--ps-blue));
       margin-bottom: 16px;
     }
     .report .body p { color: var(--ink-2); }
