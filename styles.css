@@ -1020,6 +1020,45 @@ p.lead {
       color: var(--ink-2);
     }
 
+    /* --- Últimos relatórios --- */
+    .latest-wrap {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .latest-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .latest-item { display: flex; flex-direction: column; gap: 4px; }
+    .latest-date {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--rc, var(--ps-blue));
+      margin-bottom: 2px;
+    }
+    .latest-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.25;
+      color: var(--ink);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .latest-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--ink-2);
+      margin: 0;
+    }
+
     .access {
       background: var(--ps-blue);
       color: #fff;
