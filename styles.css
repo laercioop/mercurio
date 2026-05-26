@@ -958,9 +958,14 @@ p.lead {
     }
     .report .cover .stripes {
       flex: 1;
-      background: repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 14px);
-      margin-top: 12px;
+      overflow: hidden;
+      margin-top: 10px;
+      font-family: 'Times New Roman', serif;
+      font-size: 11px;
+      line-height: 1.95;
+      color: var(--ink-2);
     }
+    .cover-text { margin: 0; }
     .report .cover .bottom-bar {
       height: 8px;
       background: var(--rc, var(--ps-blue));
@@ -1035,28 +1040,42 @@ p.lead {
       color: var(--muted);
       margin-bottom: 14px;
     }
-    .latest-item { display: flex; flex-direction: column; gap: 4px; }
-    .latest-date {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--rc, var(--ps-blue));
-      margin-bottom: 2px;
+    .latest-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
     }
-    .latest-title {
+    .latest-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .latest-row-title {
       font-family: var(--serif);
-      font-size: 17px;
-      line-height: 1.25;
-      color: var(--ink);
+      font-size: 15px;
       font-weight: 700;
-      display: block;
-      margin-bottom: 6px;
+      color: var(--ink);
+      line-height: 1.2;
     }
-    .latest-text {
+    .latest-row-date {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--rc, var(--ps-blue));
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .latest-excerpt {
       font-size: 14px;
       line-height: 1.65;
       color: var(--ink-2);
       margin: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
     }
 
     .access {
