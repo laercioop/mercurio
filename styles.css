@@ -1241,12 +1241,12 @@ p.lead {
   display: flex;
   align-items: stretch;
   min-height: 500px;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 48px;
 }
-.partner:last-child { border-bottom: none; }
+.partner:last-child { margin-bottom: 0; }
 .partner-photo {
   flex-shrink: 0;
-  width: 42%;
+  width: 32%;
   object-fit: cover;
   object-position: center 20%;
 }
