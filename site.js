@@ -20,7 +20,6 @@
       address:  "R. Alves Guimarães 462 cj 93\n05410-000 São Paulo SP",
       phone:    "+55 11 3061 0600",
       legal:    "© 2026 Pinotti & Schwartsman Associados. Todos os direitos reservados.",
-      restrict: "Acesso exclusivo a clientes",
     },
     en: {
       about:    "About",
@@ -31,7 +30,6 @@
       address:  "R. Alves Guimarães 462 cj 93\n05410-000 São Paulo, Brazil",
       phone:    "+55 11 3061 0600",
       legal:    "© 2026 Pinotti & Schwartsman Associados. All rights reserved.",
-      restrict: "Client access only",
     }
   };
 
@@ -158,7 +156,6 @@
           </div>
           <div class="legal">
             <span data-footer="legal">© 2026 Pinotti &amp; Schwartsman Associados. Todos os direitos reservados.</span>
-            <span data-footer="restrict">Acesso exclusivo a clientes</span>
           </div>
         </div>
       </footer>
