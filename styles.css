@@ -1233,44 +1233,62 @@ p.lead {
 
 /* ---------- SOBRE — SÓCIOS ---------- */
 .partners {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--line);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
   margin-top: 18px;
 }
 .partner {
-  background: var(--bg);
-  padding: 22px 22px;
+  display: flex;
+  align-items: stretch;
+  min-height: 500px;
+  border-bottom: 1px solid var(--line);
+}
+.partner:last-child { border-bottom: none; }
+.partner-photo {
+  flex-shrink: 0;
+  width: 42%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.partner-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 56px;
 }
 .partner-name {
   font-family: var(--serif);
-  font-size: clamp(20px, 1.8vw, 26px);
+  font-size: clamp(28px, 2.6vw, 40px);
   font-weight: 400;
   color: var(--ink);
-  margin-bottom: 4px;
+  margin: 0 0 8px;
 }
 .partner-role {
   display: block;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ps-blue);
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
-.partner-photo {
-  display: block;
-  width: calc(100% + 44px);
-  height: 280px;
-  object-fit: cover;
-  object-position: center top;
-  margin: -22px -22px 18px;
+.partner p {
+  color: var(--ink-2);
+  margin: 0 0 14px;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.65;
+  max-width: 52ch;
 }
-.partner p { color: var(--ink-2); margin: 0 0 6px; font-size: 15px; max-width: none; }
-@media (max-width: 600px) { .partners { grid-template-columns: 1fr; } }
+.partner-section {
+  padding-top: clamp(6px, 0.8vw, 12px);
+  padding-bottom: clamp(14px, 2vw, 24px);
+}
+@media (max-width: 700px) {
+  .partner { flex-direction: column; min-height: auto; }
+  .partner-photo { width: 100%; height: 260px; }
+  .partner-body { padding: 24px 0; }
+}
 
 /* ---------- HISTÓRIA — CITAÇÕES ---------- */
 .quotes-section {
@@ -1304,10 +1322,6 @@ p.lead {
 
 /* ---------- SOBRE — intro sem h2 gigante ---------- */
 .intro-section {
-  padding-top: clamp(14px, 2vw, 24px);
-  padding-bottom: clamp(14px, 2vw, 24px);
-}
-.partner-section {
   padding-top: clamp(14px, 2vw, 24px);
   padding-bottom: clamp(14px, 2vw, 24px);
 }
