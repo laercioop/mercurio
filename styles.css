@@ -445,14 +445,17 @@ p.lead {
 .history-timeline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
+  gap: 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 .history-timeline article {
   background: #fafafa;
   padding: 24px 22px;
+  border-right: 1px solid var(--line);
+}
+.history-timeline article:last-child {
+  border-right: none;
 }
 .history-timeline .num {
   display: inline-block;
@@ -701,17 +704,13 @@ p.lead {
   position: relative;
   overflow: hidden;
 }
-.about-block .visual .ps {
+.about-block .visual .visual-photo {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-block .visual .ps img {
-  width: 64%;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .about-block .visual .label-tag {
   position: absolute;
