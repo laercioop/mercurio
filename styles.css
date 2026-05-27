@@ -197,8 +197,8 @@ p.lead {
 .site-footer {
   background: var(--ps-blue);
   color: #fff;
-  margin-top: 44px;
-  padding: 34px 0 20px;
+  margin-top: 24px;
+  padding: 28px 0 20px;
 }
 .site-footer .grid {
   display: grid;
@@ -271,7 +271,7 @@ p.lead {
 .btn .arrow { font-family: var(--sans); }
 
 .section {
-  padding: clamp(34px, 4.5vw, 58px) 0;
+  padding: clamp(20px, 2.5vw, 36px) 0;
 }
 .section + .section { padding-top: 0; }
 
@@ -288,7 +288,7 @@ p.lead {
 .page-head {
   background: var(--ps-blue);
   color: #fff;
-  padding: clamp(24px, 3.5vw, 42px) 0 clamp(20px, 2.8vw, 34px);
+  padding: clamp(14px, 1.8vw, 22px) 0 clamp(12px, 1.5vw, 18px);
   margin-bottom: 0;
 }
 .page-head .eyebrow {
@@ -307,7 +307,7 @@ p.lead {
   font-size: 13px;
   letter-spacing: 0.06em;
   color: rgba(255,255,255,0.75);
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -629,7 +629,7 @@ p.lead {
 
 /* ---------- HOME ---------- */
 .hero {
-  padding: clamp(24px, 3vw, 36px) 0 clamp(30px, 4vw, 50px);
+  padding: clamp(14px, 2vw, 22px) 0 clamp(14px, 2vw, 22px);
 }
 .hero h1 {
   font-size: clamp(24px, 4vw, 58px);
@@ -653,7 +653,7 @@ p.lead {
   flex-wrap: wrap;
 }
 
-.services { padding-top: clamp(34px, 4.5vw, 58px); }
+.services { padding-top: clamp(16px, 2vw, 28px); }
 .services .head {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -730,8 +730,8 @@ p.lead {
 
 .reports-strip {
   background: #fafafa;
-  padding: clamp(34px, 4.5vw, 58px) 0;
-  margin-top: clamp(30px, 4vw, 50px);
+  padding: clamp(18px, 2.5vw, 36px) 0;
+  margin-top: clamp(10px, 1.5vw, 18px);
 }
 .reports-strip .head {
   display: grid;
@@ -894,17 +894,16 @@ p.lead {
 
 /* ---------- RELATORIOS PAGE ---------- */
     .reports {
-      padding: clamp(34px, 4.5vw, 58px) 0;
+      padding: clamp(14px, 2vw, 24px) 0;
     }
     .report {
       display: grid;
       grid-template-columns: 5fr 7fr;
       gap: 32px;
-      padding: clamp(24px, 3.5vw, 42px) 0;
+      padding: clamp(14px, 2vw, 26px) 0;
       border-bottom: 1px solid var(--line);
       align-items: start;
     }
-    .report:first-of-type { border-top: 1px solid var(--line); }
     .report .cover {
       background: #fff;
       border: 1px solid var(--line);
