@@ -1262,12 +1262,12 @@ p.lead {
   margin-bottom: 12px;
 }
 .partner-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  display: block;
+  width: calc(100% + 44px);
+  height: 280px;
   object-fit: cover;
   object-position: center top;
-  margin-bottom: 16px;
-  display: block;
+  margin: -22px -22px 18px;
 }
 .partner p { color: var(--ink-2); margin: 0 0 6px; font-size: 15px; max-width: none; }
 @media (max-width: 600px) { .partners { grid-template-columns: 1fr; } }
