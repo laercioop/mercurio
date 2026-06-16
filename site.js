@@ -6,7 +6,6 @@
     { href: "index.html",     pt: "Home",        en: "Home" },
     { href: "relatorios.html",pt: "Relatórios",  en: "Reports" },
     { href: "sobre.html",     pt: "Sobre",       en: "About" },
-    { href: "historia.html",  pt: "História",    en: "History" },
     { href: "contato.html",   pt: "Contato",     en: "Contact" },
   ];
 
@@ -137,7 +136,6 @@
               <ul>
                 <li><a href="relatorios.html" data-footer="reports">Relatórios</a></li>
                 <li><a href="sobre.html"      data-footer="about">Sobre</a></li>
-                <li><a href="historia.html"   data-footer="history">História</a></li>
                 <li><a href="contato.html"    data-footer="contact">Contato</a></li>
               </ul>
             </div>

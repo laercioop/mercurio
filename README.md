@@ -6,7 +6,6 @@ Site institucional estatico da Pinotti & Schwartsman Associados.
 
 - `index.html`: pagina inicial.
 - `sobre.html`: apresentacao institucional.
-- `historia.html`: origem da AC Pastore & Associados e transicao para Pinotti & Schwartsman Associados.
 - `relatorios.html`: produtos e publicacoes.
 - `contato.html`: canais de contato e formulario via email.
 - `styles.css`: identidade visual e estilos compartilhados.
