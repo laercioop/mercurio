@@ -52,13 +52,13 @@ h1, h2, h3, h4 {
   overflow-wrap: break-word;
   word-break: break-word;
 }
-h1 { font-size: clamp(32px, 6vw, 72px); line-height: 1.05; }
-h2 { font-size: clamp(24px, 3.4vw, 44px); line-height: 1.15; }
-h3 { font-size: clamp(18px, 2vw, 26px); line-height: 1.25; }
+h1 { font-size: clamp(24px, 3vw, 34px); line-height: 1.2; }
+h2 { font-size: clamp(20px, 2.2vw, 27px); line-height: 1.3; }
+h3 { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.35; }
 
 p { margin: 0 0 1em; max-width: 64ch; }
 p.lead {
-  font-size: clamp(18px, 1.3vw, 21px);
+  font-size: clamp(16px, 1.1vw, 18px);
   color: var(--ink-2);
   line-height: 1.55;
   max-width: 60ch;
@@ -225,8 +225,8 @@ p.lead {
 .site-footer a:hover { opacity: .75; }
 .site-footer .wordmark {
   font-family: var(--serif);
-  font-size: 24px;
-  line-height: 1.15;
+  font-size: 19px;
+  line-height: 1.25;
   margin-bottom: 8px;
 }
 .site-footer .small {
@@ -296,7 +296,7 @@ p.lead {
 }
 .page-head h1 {
   color: #fff;
-  font-size: clamp(18px, 2.6vw, 38px);
+  font-size: clamp(18px, 2vw, 26px);
   max-width: none;
 }
 .page-head h1 span,
@@ -352,6 +352,7 @@ p.lead {
     cursor: pointer;
     padding: 0;
     align-self: center;
+    margin-right: 8px;
   }
   .menu-toggle span {
     display: block;
@@ -375,20 +376,6 @@ p.lead {
   .site-header .row { height: 72px; }
   .brand { margin-left: 12px; }
   .brand img { content: url("assets/ps-icon.png"); height: 46px; }
-  .lang-toggle { display: none !important; }
-  .menu-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--ps-blue);
-    border: 0;
-    width: 52px;
-    height: 52px;
-    cursor: pointer;
-    padding: 0;
-    align-self: center;
-    margin-right: 8px;
-  }
   .nav.open {
     padding: 0;
   }
@@ -435,7 +422,7 @@ p.lead {
 .history-year {
   font-family: var(--serif);
   color: var(--ps-blue);
-  font-size: clamp(56px, 7vw, 96px);
+  font-size: clamp(30px, 4vw, 48px);
   line-height: 1;
 }
 .history-band {
@@ -466,7 +453,7 @@ p.lead {
   margin-bottom: 10px;
 }
 .history-timeline h3 {
-  font-size: 24px;
+  font-size: 19px;
   margin-bottom: 8px;
 }
 .history-timeline p {
@@ -546,13 +533,13 @@ p.lead {
 .history-chapters time {
   display: inline-block;
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 20px;
   color: var(--ps-blue);
   margin-bottom: 10px;
   line-height: 1;
 }
 .history-chapters h3 {
-  font-size: 24px;
+  font-size: 19px;
   margin-bottom: 8px;
 }
 .history-chapters p {
@@ -607,6 +594,13 @@ p.lead {
   .history-chapters-grid {
     grid-template-columns: 1fr;
   }
+  .history-timeline article {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .history-timeline article:last-child {
+    border-bottom: none;
+  }
   .history-profile-copy {
     columns: 1;
   }
@@ -635,13 +629,13 @@ p.lead {
   padding: clamp(14px, 2vw, 22px) 0 clamp(14px, 2vw, 22px);
 }
 .hero h1 {
-  font-size: clamp(24px, 4vw, 58px);
+  font-size: clamp(22px, 2.6vw, 32px);
   max-width: none;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .hero .lead {
   max-width: 56ch;
-  font-size: clamp(18px, 1.4vw, 22px);
+  font-size: clamp(16px, 1.1vw, 18px);
   color: var(--ink-2);
   margin-bottom: 24px;
 }
@@ -688,7 +682,7 @@ p.lead {
   letter-spacing: 0.18em;
   color: var(--ps-blue);
 }
-.svc h3 { font-size: 24px; line-height: 1.2; margin-bottom: 8px; }
+.svc h3 { font-size: 19px; line-height: 1.3; margin-bottom: 8px; }
 .svc p { color: var(--ink-2); margin: 0; }
 .svc:hover { background: var(--ps-blue-soft); }
 
@@ -755,7 +749,7 @@ p.lead {
 }
 .report-row .name {
   font-family: var(--serif);
-  font-size: clamp(22px, 2vw, 30px);
+  font-size: clamp(18px, 1.4vw, 21px);
   color: var(--ink);
 }
 .report-row .desc {
@@ -837,12 +831,12 @@ p.lead {
     }
     .pillar .num {
       font-family: var(--serif);
-      font-size: 38px;
+      font-size: 26px;
       color: var(--ps-blue);
       line-height: 1;
       margin-bottom: 10px;
     }
-    .pillar h3 { margin-bottom: 8px; font-size: 22px; }
+    .pillar h3 { margin-bottom: 8px; font-size: 19px; }
     .pillar p { color: var(--ink-2); margin: 0; }
 
     .quote-block {
@@ -865,8 +859,8 @@ p.lead {
     }
     .quote-block blockquote {
       font-family: var(--serif);
-      font-size: clamp(28px, 3vw, 44px);
-      line-height: 1.25;
+      font-size: clamp(20px, 2vw, 27px);
+      line-height: 1.35;
       margin: 0;
       max-width: 22ch;
     }
@@ -944,8 +938,8 @@ p.lead {
     }
     .report .cover h3 {
       font-family: var(--serif);
-      font-size: 28px;
-      line-height: 1.1;
+      font-size: 20px;
+      line-height: 1.2;
       color: var(--ink);
     }
     .report .cover .sub {
@@ -996,8 +990,8 @@ p.lead {
       display: block;
     }
     .report .body h2 {
-      font-size: clamp(36px, 4vw, 56px);
-      line-height: 1.05;
+      font-size: clamp(22px, 2.2vw, 28px);
+      line-height: 1.2;
       margin-bottom: 10px;
     }
     .report .body .sub {
@@ -1158,8 +1152,8 @@ p.lead {
     }
     .contact .form-pane .lead {
       font-family: var(--serif);
-      font-size: clamp(26px, 2.6vw, 36px);
-      line-height: 1.2;
+      font-size: clamp(18px, 1.8vw, 23px);
+      line-height: 1.3;
       color: #fff;
       max-width: 22ch;
       margin: 0 0 24px;
@@ -1259,7 +1253,7 @@ p.lead {
 }
 .partner-name {
   font-family: var(--serif);
-  font-size: clamp(28px, 2.6vw, 40px);
+  font-size: clamp(21px, 2vw, 27px);
   font-weight: 400;
   color: var(--ink);
   margin: 0 0 8px;
