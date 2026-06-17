@@ -20,7 +20,7 @@
 
 * { box-sizing: border-box; }
 
-html, body {
+html {
   overflow-x: clip;
 }
 
