@@ -177,21 +177,21 @@
     const nav = document.querySelector(".nav");
     if (menuToggle && nav) {
       nav.id = "site-nav";
+      function closeMenu() {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
       menuToggle.addEventListener("click", () => {
         const open = nav.classList.toggle("open");
         menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.style.overflow = open ? "hidden" : "";
       });
       nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("open");
-          menuToggle.setAttribute("aria-expanded", "false");
-        });
+        link.addEventListener("click", closeMenu);
       });
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          nav.classList.remove("open");
-          menuToggle.setAttribute("aria-expanded", "false");
-        }
+        if (e.key === "Escape") closeMenu();
       });
     }
     initContactForm();
