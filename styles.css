@@ -20,8 +20,8 @@
 
 * { box-sizing: border-box; }
 
-html {
-  overflow-x: hidden;
+html, body {
+  overflow-x: clip;
 }
 
 html, body {
