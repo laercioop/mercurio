@@ -320,6 +320,9 @@ p.lead {
     display: none;
     position: fixed;
     inset: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: -webkit-fill-available;
     z-index: 100;
     background: var(--ps-blue);
     flex-direction: column;
@@ -805,7 +808,9 @@ p.lead {
 @media (max-width: 920px) {
   .services .head { grid-template-columns: 1fr; gap: 24px; }
   .svc-grid { grid-template-columns: 1fr; }
-  .about-block { grid-template-columns: 1fr; gap: 30px; }
+  .about-block { grid-template-columns: 1fr; gap: 0; }
+  .about-block .visual { margin: 0 calc(-1 * var(--gutter)); }
+  .about-block .copy { padding-top: 28px; }
   .reports-strip .head { grid-template-columns: 1fr; gap: 24px; }
   .cta .row { grid-template-columns: 1fr; }
   .cta .actions { justify-self: start; }
