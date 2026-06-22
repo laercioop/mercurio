@@ -274,7 +274,8 @@ p.lead {
 .btn .arrow { font-family: var(--sans); }
 
 .section {
-  padding: clamp(20px, 2.5vw, 36px) 0;
+  padding-top: clamp(20px, 2.5vw, 36px);
+  padding-bottom: clamp(20px, 2.5vw, 36px);
 }
 .section + .section { padding-top: 0; }
 
