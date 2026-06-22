@@ -1,0 +1,33 @@
+================================================================================
+CONTATO
+================================================================================
+
+[INFO — lado esquerdo]
+Eyebrow: Contato
+Título: Atendimento à equipe da P&S.
+Texto: Para consultas sobre assinatura ou parcerias, utilize os canais abaixo.
+
+Endereço:
+R. Alves Guimarães 462 cj 93
+05410-000 São Paulo SP
+
+Telefone: +55 11 3061 0600
+
+Email: contato@psassociados.com
+
+---
+
+[FORMULÁRIO — lado direito]
+Título: Formulário de contato
+Lead: Descreva brevemente o contexto e retornaremos em contato.
+
+Campos:
+- Nome
+- Empresa
+- Email corporativo
+- Telefone
+- Tipo de instituição 
+- Mensagem
+
+Aviso: As informações fornecidas serão tratadas com confidencialidade.
+Botão: Enviar solicitação →

@@ -7,6 +7,7 @@ CLAUDE.md
 
 # Temporários
 temp/
+texto_*.txt
 
 # Sistema
 Thumbs.db
