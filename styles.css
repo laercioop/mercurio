@@ -973,7 +973,7 @@ p.lead {
     }
     .report .cover .stripes {
       flex: 1;
-      overflow: hidden;
+      overflow-y: auto;
       margin-top: 10px;
       font-family: var(--sans);
       font-size: 13px;
@@ -1115,7 +1115,7 @@ p.lead {
 
     @media (max-width: 920px) {
       .report { grid-template-columns: 1fr; gap: 40px; }
-      .report .cover { max-width: 380px; }
+      .report .cover { max-width: 380px; margin-inline: auto; }
       .access .row { grid-template-columns: 1fr; }
       .access .actions { justify-self: start; }
     }
