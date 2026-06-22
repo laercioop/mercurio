@@ -909,7 +909,8 @@ p.lead {
 
 /* ---------- RELATORIOS PAGE ---------- */
     .reports {
-      padding: clamp(14px, 2vw, 24px) 0;
+      padding-top: clamp(14px, 2vw, 24px);
+      padding-bottom: clamp(14px, 2vw, 24px);
     }
     .report {
       display: grid;
