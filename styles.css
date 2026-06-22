@@ -15,7 +15,7 @@
   --sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --max: 1240px;
-  --gutter: clamp(18px, 3.2vw, 44px);
+  --gutter: clamp(32px, 4vw, 44px);
 }
 
 * { box-sizing: border-box; }
@@ -408,6 +408,12 @@ p.lead {
   .menu-toggle span::after  { top: 7px; }
 
   /* X state — triggered when nav.open is the immediate prev sibling */
+  .nav.open + .menu-toggle {
+    position: fixed;
+    top: 10px;
+    right: var(--gutter);
+    z-index: 200;
+  }
   .nav.open + .menu-toggle span              { background: transparent; }
   .nav.open + .menu-toggle span::before      { background: #fff; transform: rotate(45deg);  top: 0; }
   .nav.open + .menu-toggle span::after       { background: #fff; transform: rotate(-45deg); top: 0; }
@@ -808,9 +814,7 @@ p.lead {
 @media (max-width: 920px) {
   .services .head { grid-template-columns: 1fr; gap: 24px; }
   .svc-grid { grid-template-columns: 1fr; }
-  .about-block { grid-template-columns: 1fr; gap: 0; }
-  .about-block .visual { margin: 0 calc(-1 * var(--gutter)); }
-  .about-block .copy { padding-top: 28px; }
+  .about-block { grid-template-columns: 1fr; gap: 28px; }
   .reports-strip .head { grid-template-columns: 1fr; gap: 24px; }
   .cta .row { grid-template-columns: 1fr; }
   .cta .actions { justify-self: start; }
