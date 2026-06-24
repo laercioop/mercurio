@@ -1245,7 +1245,7 @@ p.lead {
     @media (max-width: 920px) {
       .contact { grid-template-columns: 1fr; }
       .contact .info { padding-right: 0; padding-bottom: 30px; }
-      .contact .form-pane { margin: 0 var(--gutter); }
+      .contact .form-pane { margin-left: var(--gutter); margin-right: var(--gutter); }
       .form-grid { grid-template-columns: 1fr; }
     }
 
