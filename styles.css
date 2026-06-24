@@ -1243,8 +1243,9 @@ p.lead {
     .form-actions .btn:hover { background: rgba(255,255,255,0.88); }
 
     @media (max-width: 920px) {
-      .contact { grid-template-columns: 1fr; margin-inline: var(--gutter); }
+      .contact { grid-template-columns: 1fr; }
       .contact .info { padding-right: 0; padding-bottom: 30px; }
+      .contact .form-pane { margin: 0 var(--gutter); }
       .form-grid { grid-template-columns: 1fr; }
     }
 
