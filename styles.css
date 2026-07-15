@@ -15,7 +15,7 @@
   --sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --max: 1240px;
-  --gutter: clamp(32px, 4vw, 44px);
+  --gutter: clamp(20px, 4vw, 44px);
 }
 
 * { box-sizing: border-box; }
