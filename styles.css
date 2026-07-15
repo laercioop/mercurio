@@ -136,9 +136,8 @@ p.lead {
   width: auto;
   object-fit: fill;
 }
-.brand-text {
-  display: none; /* the logo image carries the wordmark */
-}
+.brand-text  { display: none; }
+.logo-mobile { display: none; }
 .nav {
   display: flex;
   align-items: stretch;
@@ -421,7 +420,8 @@ p.lead {
 
   .site-header .row { height: 72px; }
   .brand { margin-left: 12px; }
-  .brand img { content: url("assets/ps-logo-br.png"); height: 38px; }
+  .logo-desktop { display: none; }
+  .logo-mobile  { display: block; height: 38px; width: auto; }
 
   .site-footer .grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
