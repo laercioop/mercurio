@@ -104,7 +104,7 @@
           <a href="index.html" class="brand" aria-label="Pinotti &amp; Schwartsman Associados">
             <img src="assets/ps-logo.png" alt="Pinotti &amp; Schwartsman Associados" />
           </a>
-          <nav class="nav">${navLinks}
+          <nav class="nav"><img class="nav-logo" src="assets/ps-logo.png" alt="Pinotti &amp; Schwartsman Associados" />${navLinks}
             <div class="lang lang-mobile" role="group" aria-label="Language">
               <button data-lang="pt" type="button">PORT</button>
               <button data-lang="en" type="button">ENG</button>

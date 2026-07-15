@@ -137,6 +137,7 @@ p.lead {
   object-fit: fill;
 }
 .brand-text { display: none; }
+.nav-logo   { display: none; }
 .nav {
   display: flex;
   align-items: stretch;
@@ -411,6 +412,15 @@ p.lead {
     position: fixed;
     top: 10px;
     right: var(--gutter);
+    z-index: 200;
+  }
+  .nav.open .nav-logo {
+    display: block;
+    position: fixed;
+    top: 14px;
+    left: var(--gutter);
+    height: 44px;
+    width: auto;
     z-index: 200;
   }
   .nav.open + .menu-toggle span              { background: transparent; }
