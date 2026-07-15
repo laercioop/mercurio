@@ -102,8 +102,7 @@
       <header class="site-header">
         <div class="container row">
           <a href="index.html" class="brand" aria-label="Pinotti &amp; Schwartsman Associados">
-            <img class="logo-desktop" src="assets/ps-logo.png" alt="Pinotti &amp; Schwartsman Associados" />
-            <img class="logo-mobile" src="assets/ps-logo-br.png" alt="Pinotti &amp; Schwartsman Associados" />
+            <img src="assets/ps-logo.png" alt="Pinotti &amp; Schwartsman Associados" />
           </a>
           <nav class="nav">${navLinks}
             <div class="lang lang-mobile" role="group" aria-label="Language">
