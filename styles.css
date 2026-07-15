@@ -422,6 +422,7 @@ p.lead {
     height: 44px;
     width: auto;
     z-index: 200;
+    filter: brightness(0) invert(1);
   }
   .nav.open + .menu-toggle span              { background: transparent; }
   .nav.open + .menu-toggle span::before      { background: #fff; transform: rotate(45deg);  top: 0; }
