@@ -939,7 +939,7 @@ p.lead {
       flex-direction: column;
       gap: 18px;
       box-shadow: 0 1px 0 rgba(0,0,0,0.02);
-      overflow: hidden;
+      overflow: clip;
     }
     .report .cover .top {
       display: flex;
