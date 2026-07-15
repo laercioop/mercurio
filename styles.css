@@ -418,8 +418,8 @@ p.lead {
   .nav.open + .menu-toggle span::after       { background: #fff; transform: rotate(-45deg); top: 0; }
 
   .site-header .row { height: 72px; }
-  .brand { margin-left: 12px; }
-  .brand img { height: 38px; }
+  .brand { margin-left: 0; }
+  .brand img { height: 44px; }
 
   .site-footer .grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
