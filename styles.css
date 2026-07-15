@@ -939,7 +939,8 @@ p.lead {
       flex-direction: column;
       gap: 18px;
       box-shadow: 0 1px 0 rgba(0,0,0,0.02);
-      overflow: hidden;
+      overflow: clip;
+      align-self: start;
     }
     .report .cover .top {
       display: flex;
@@ -986,8 +987,8 @@ p.lead {
       overflow-y: auto;
       margin-top: 10px;
       font-family: var(--sans);
-      font-size: 11px;
-      line-height: 1.55;
+      font-size: 10px;
+      line-height: 1.5;
       color: var(--ink-2);
     }
     .cover-text { margin: 0; }
